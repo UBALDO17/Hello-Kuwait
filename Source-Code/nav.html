@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar with Kuwait Temp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: rgb(24 111 101);
+      padding: 15px;
+    }
+
+    .navbar-top {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 32px;
+      gap: 70%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0C8556;
+      z-index: 1;
+    }
+
+    .search-container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      z-index: 0;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 10px 16px;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .location {
+      text-align: right;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .location .temp {
+      color: #0C8556;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .navbar-bottom {
+      text-align: center;
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 120px;
+    }
+
+    .navbar-bottom a {
+      margin: 0 16px;
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar-bottom a:hover {
+      color: #08513c;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-top {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-container {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin: 12px 0;
+      }
+
+      .navbar-bottom {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .navbar-bottom a {
+        margin: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <div class="navbar">
+    <div class="navbar-top">
+      <div class="logo">MyLogo</div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+      </div>
+
+      <div class="location">
+        <div>Kuwait</div>
+        <div class="temp">28°C</div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="navbar-bottom">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blogs</a>
+      <a href="#">Quiz</a>
+      <a href="#">Landing Page</a>
+    </div>
+  </div>
+
+</body>
+</html>
