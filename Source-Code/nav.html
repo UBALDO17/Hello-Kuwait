@@ -132,7 +132,8 @@
 
       <div class="location">
         <div><i class="fa-solid fa-location-dot" style="margin-right: 5px;"></i>Kuwait City</div>
-        <div class="temp">28.7°C</div>
+        <div class="temp" id="kuwait-temp">Loading...</div>
+
       </div>
     </div>
 
@@ -147,5 +148,26 @@
     </div>
   </div>
 
+
+
+  <script>
+    const apiKey = '6094a14f259ef16b2582b19fbfd721a7';
+    const kuwaitTemp = document.getElementById('kuwait-temp');
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Kuwait,KW&appid=${apiKey}&units=metric`)
+      .then(response => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+      })
+      .then(data => {
+        const temp = Math.round(data.main.temp);
+        kuwaitTemp.textContent = `${temp}°C`;
+      })
+      .catch(error => {
+        kuwaitTemp.textContent = 'N/A';
+        console.error('Error fetching temperature:', error.message);
+      });
+  </script>
+  
 </body>
 </html>
