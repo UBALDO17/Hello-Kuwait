@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../footer.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <!-- JavaScript to fetch and insert the navbar -->
+    <script>
+        fetch('../nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the navbar:', error);
+            });
+    </script>
+
+
+    <section class="about-us">
+        <div class="about-us-content">
+            <h1>About Us</h1>
+            <p class="tagline">We are committed to delivering the best service and value to our customers.</p>
+        </div>
+        <div class="about-us-image">
+            <img src="https://static.wixstatic.com/media/051c31_987eb4f6672b4ac5b88abcc7e58d96b8~mv2.jpg/v1/crop/x_91,y_124,w_473,h_176/fill/w_411,h_127,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/kuwait-4.jpg"
+                alt="About Us Image">
+        </div>
+    </section>
+
+    <section class="kuwait-info">
+        <h2>About Kuwait</h2>
+
+        <div class="info-block">
+            <h3>Geography</h3>
+            <p>Kuwait is a small country in the northeastern part of the Arabian Peninsula, bordered by Iraq to the
+                north
+                and west, Saudi Arabia to the south, and the Persian Gulf to the east. Its capital city is Kuwait City,
+                which is also the country's largest city. Kuwait has a total land area of approximately 17,818 square
+                kilometers, making it one of the smallest countries in the world.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>History</h3>
+            <p>Kuwait has a rich history that dates back to ancient times. It was an important trade center due to its
+                strategic location along the Persian Gulf. In the 18th century, Kuwait was established as an independent
+                sheikhdom under the Al-Sabah family, who still rule the country today. Kuwait gained independence from
+                the
+                United Kingdom on June 19, 1961.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Economy</h3>
+            <p>Kuwait has one of the highest per capita incomes in the world, mainly due to its significant oil
+                reserves.
+                The discovery of oil in the 1930s transformed Kuwait into one of the wealthiest countries in the Middle
+                East. The oil industry remains the backbone of the economy, accounting for a substantial portion of
+                government revenue and export earnings. Kuwait has tried diversifying its economy in recent years by
+                investing in various sectors such as finance, trade, and tourism.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Culture</h3>
+            <p>Kuwait's culture is deeply rooted in Islamic traditions, strongly emphasizing family, hospitality, and
+                respect for elders. Arabic is the official language, and Islam is the state religion, with most Kuwaitis
+                being Sunni Muslims. The country celebrates various cultural events and festivals, such as National Day
+                on
+                February 25th and Liberation Day on February 26th. Traditional music, dance, and cuisine play a vital
+                role
+                in Kuwaiti culture, with dishes like machboos (a spiced rice dish with meat) being popular.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Politics</h3>
+            <p>Kuwait is a constitutional emirate with a semi-democratic political system. The Emir of Kuwait is the
+                head of
+                state and holds significant executive powers, while the National Assembly (Majlis Al-Umma) is the
+                legislative body. The National Assembly consists of 50 elected members who serve four-year terms. Kuwait
+                has
+                a relatively open political environment compared to some of its neighbors, with active participation
+                from
+                various political groups and a degree of press freedom.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Society</h3>
+            <p>Kuwait has a diverse and cosmopolitan society with a significant expatriate population. Foreign workers
+                comprise a large workforce, primarily from South Asia, the Middle East, and Western countries. The
+                government provides extensive social services, including free healthcare, education, and subsidized
+                housing
+                for Kuwaiti citizens. The standard of living is high, with modern infrastructure, shopping malls, and
+                entertainment facilities throughout the country.</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Environment</h3>
+            <p>Kuwait's climate is characterized by scorching summers and mild winters. The country experiences very
+                little
+                rainfall, and much of the landscape is dominated by desert terrain. Despite its arid environment, Kuwait
+                has
+                tried to address environmental issues such as water scarcity and pollution. Initiatives include water
+                desalination projects and investment in renewable energy sources.</p>
+        </div>
+
+        <div class="key-events">
+            <h2>Key Events and Holidays in Kuwait</h2>
+
+            <div class="event-category">
+                <h3>National Holidays</h3>
+                <ul>
+                    <li>National Day: February 25</li>
+                    <li>Liberation Day: February 26</li>
+                </ul>
+            </div>
+
+            <div class="event-category">
+                <h3>Religious Holidays (Islamic Calendar, dates vary each year)</h3>
+                <ul>
+                    <li>Eid al-Fitr: Varies (based on the lunar calendar, marks the end of Ramadan)</li>
+                    <li>Eid al-Adha: Varies (approximately 70 days after Eid al-Fitr)</li>
+                    <li>Islamic New Year (Hijri New Year): Varies (first day of Muharram)</li>
+                    <li>Prophet Muhammad's Birthday (Mawlid al-Nabi): Varies (12th day of Rabi' al-awwal)</li>
+                </ul>
+            </div>
+
+            <div class="event-category">
+                <h3>Cultural Events</h3>
+                <ul>
+                    <li>Hala February Festival: February (month-long festival)</li>
+                    <li>Kuwait International Book Fair: November (annual event)</li>
+                    <li>Qurain Cultural Festival: Varies (yearly event)</li>
+                    <li>Gulf Cooperation Council (GCC) Days: Varies (annual event)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-kuwaitmate">
+        <h2>About Hello Kuwait</h2>
+        <p>
+            Hello Kuwait was founded to create a directory for tourism, business, and other aspects of Kuwait. The site
+            offers
+            opportunities to visit places for entertainment, sports, restaurants, landmarks, and the country's own
+            culture,
+            as well as the latest news, and an advertising space for the country's own businesses.
+        </p>
+
+        <h3>Vision</h3>
+        <p>
+            To be the leading digital gateway to Kuwait, fostering a well-connected, informed, and thriving community by
+            offering unparalleled access to essential information and resources.
+        </p>
+
+        <h3>Mission</h3>
+        <p>
+            To provide the most comprehensive, user-friendly, and reliable directory of Kuwait's businesses, services,
+            and
+            attractions, empowering residents and visitors alike to discover and connect with everything Kuwait offers.
+            Our
+            mission encompasses the following goals:
+        </p>
+
+        <ul>
+            <li><strong>Comprehensive Listings:</strong> To include a wide range of businesses, services, and
+                attractions
+                across all sectors, ensuring that users can find exactly what they need.</li>
+            <li><strong>User-Friendly Interface:</strong> To design an intuitive and accessible platform that makes
+                searching and navigating our directory simple and efficient.</li>
+            <li><strong>Reliable Information:</strong> To maintain accurate and up-to-date listings, offering
+                trustworthy
+                information that users can rely on.</li>
+            <li><strong>Community Empowerment:</strong> To support local businesses by giving them visibility and a
+                platform
+                to reach a wider audience.</li>
+            <li><strong>Visitor Assistance:</strong> To help tourists and newcomers quickly discover and explore Kuwait,
+                enhancing their experience with local insights and recommendations.</li>
+            <li><strong>Continuous Improvement:</strong> To regularly update and improve our directory based on user
+                feedback and technological advancements, ensuring we meet the evolving needs of our community.</li>
+        </ul>
+    </section>
+
+
+
+    <div id="footer-container"></div>
+
+    <!-- JavaScript to fetch and insert the footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    </script>
+
+
+
+
+</body>
+
+</html>
