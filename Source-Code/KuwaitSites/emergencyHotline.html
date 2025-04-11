@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotlines | Hello Kuwait</title>
+    <link rel="stylesheet" href="emergencyHotline.css">
+    <link rel="stylesheet" href="../footer.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <h1>Emergency Hotlines</h1>
+        <p>
+            In case of any emergency, it is crucial to have immediate access to the right contact numbers.
+            Below is a comprehensive list of essential emergency hotlines in Kuwait. These numbers are operational 24/7
+            to ensure you receive prompt assistance when needed. Please save these numbers and share them with your
+            family
+            and friends.
+        </p>
+
+        <div class="hotline-table">
+            <div class="table-header">
+                <div class="column name">Name</div>
+                <div class="column phone">Phone Number</div>
+            </div>
+
+            <div class="table-row">
+                <div class="column name">Complaints of Consumer Protection - Ministry of Commerce and Industry</div>
+                <div class="column phone">135</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Electricity & Water Emergency</div>
+                <div class="column phone">152</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Emergency Phone Number of Police, Ambulance and Fire Services</div>
+                <div class="column phone">112</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Hotline of Kuwait Municipality</div>
+                <div class="column phone">139</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Hotline of Ministry of Health</div>
+                <div class="column phone">151</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Kuwait International Airport</div>
+                <div class="column phone">161</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Public Institution for Social Security</div>
+                <div class="column phone">114</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Zakat House</div>
+                <div class="column phone">175</div>
+            </div>
+            <div class="table-row">
+                <div class="column name">Civil Service Commission</div>
+                <div class="column phone">1828888 - 133</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <!-- JavaScript to fetch and insert the navbar and footer -->
+    <script>
+        fetch('../nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the navbar:', error);
+            });
+
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    </script>
+</body>
+
+</html>

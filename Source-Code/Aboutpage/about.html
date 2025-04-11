@@ -13,18 +13,6 @@
 
     <div id="navbar-container"></div>
 
-    <!-- JavaScript to fetch and insert the navbar -->
-    <script>
-        fetch('../nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error loading the navbar:', error);
-            });
-    </script>
-
 
     <section class="about-us">
         <div class="about-us-content">
@@ -192,8 +180,17 @@
 
     <div id="footer-container"></div>
 
-    <!-- JavaScript to fetch and insert the footer -->
+    <!-- JavaScript to fetch and insert the navbar and footer -->
     <script>
+        fetch('../nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the navbar:', error);
+            });
+
         fetch('../footer.html')
             .then(response => response.text())
             .then(data => {
@@ -203,9 +200,6 @@
                 console.error('Error loading the footer:', error);
             });
     </script>
-
-
-
 
 </body>
 

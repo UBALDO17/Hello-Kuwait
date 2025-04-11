@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout for Business Directory</title>
+    <link rel="stylesheet" href="uni.css">
+    <link rel="stylesheet" href="../footer.css">
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <a href="#" class="back-button">← Back</a>
+        <div class="left-column">
+            <img src="logo.png" alt="Logo" class="logo" />
+            <h1 class="business-title">Business Name</h1>
+        </div>
+        <div class="right-column">
+            <img src="business.jpg" alt="Business Image" class="business-image" />
+        </div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="profile">Profile</button>
+            <button class="tab-button" data-tab="location">Location</button>
+            <button class="tab-button" data-tab="reviews">Reviews</button>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-panel active" id="profile">
+                <p>This is the profile of the business.</p>
+            </div>
+            <div class="tab-panel" id="location">
+                <p>Business location and map details here.</p>
+            </div>
+            <div class="tab-panel" id="reviews">
+                <p>Customer reviews and ratings will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <!-- JavaScript to fetch and insert the navbar and footer -->
+    <script>
+        fetch('../nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the navbar:', error);
+            });
+
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+
+        const buttons = document.querySelectorAll('.tab-button');
+        const panels = document.querySelectorAll('.tab-panel');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active state
+                buttons.forEach(btn => btn.classList.remove('active'));
+                panels.forEach(panel => panel.classList.remove('active'));
+
+                // Add active state to clicked
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
