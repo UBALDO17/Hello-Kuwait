@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="../footer.css">
+    
 </head>
 <body>
     <div id="navbar"></div>
@@ -16,7 +18,7 @@
       </div>
 
       <div id="contactinfo">
-        <img src="2102191-376869738.avif" alt="">
+        <img src="../Images/2102191-376869738.avif" alt="">
         <p>
           Address:<br><br>
 
@@ -32,20 +34,26 @@ Email address: info@kuwaitmate.com
     <div id="footer"></div>
   
     <script>
-      // Load navbar
-      fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-        });
-  
-      // Load footer
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer').innerHTML = data;
-        });
-    </script>
+      fetch('../nav.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+          })
+          .catch(error => {
+              console.error('Error loading the navbar:', error);
+          });
+
+      fetch('../footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer').innerHTML = data;
+          })
+          .catch(error => {
+              console.error('Error loading the footer:', error);
+          });
+  </script>
+  <script src="../nav.js"></script>
+
   </body>
   
 </html>

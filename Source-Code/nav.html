@@ -124,7 +124,7 @@
   <!-- Top Navbar -->
   <div class="navbar">
     <div class="navbar-top">
-      <div class="logo">MyLogo</div>
+      <div class="logo"><img style="width: 80px;" src="/Source-Code/Images/17fe54b7-45ee-4091-b613-405a4479684c 2.png" alt=""></div>
 
       <div class="search-container">
         <input type="text" placeholder="Search...">
@@ -149,25 +149,8 @@
   </div>
 
 
+  
 
-  <script>
-    const apiKey = '6094a14f259ef16b2582b19fbfd721a7';
-    const kuwaitTemp = document.getElementById('kuwait-temp');
-
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Kuwait,KW&appid=${apiKey}&units=metric`)
-      .then(response => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-      })
-      .then(data => {
-        const temp = Math.round(data.main.temp);
-        kuwaitTemp.textContent = `${temp}°C`;
-      })
-      .catch(error => {
-        kuwaitTemp.textContent = 'N/A';
-        console.error('Error fetching temperature:', error.message);
-      });
-  </script>
   
 </body>
 </html>
