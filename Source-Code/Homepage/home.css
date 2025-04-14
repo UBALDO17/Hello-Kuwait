@@ -57,13 +57,14 @@
 }
 
 .HelloKuwait{
-  font-size: 64px;
+  font-size: 56px;
 }
 
 .rtl-text {
   direction: rtl;
   unicode-bidi: isolate;
   font-weight: bold;
+  font-size: 42px;
 }
 
 .middle-body{
