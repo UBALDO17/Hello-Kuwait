@@ -5,49 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelloKuwait</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../footer.css">
 </head>
 <body>
-    <section class="bg_poster">
-        <div class="poster">
-            <div class="logo_divider">
-                <img src="LOGO.png" alt="HelloKuwait Logo" class="logo">
-            </div>
-            <div class="texts">
-                <h1 class="title-text">Hello Kuwait</h1> 
-                <h2 class="text">مرحبا الكويت</h2> 
-                <h3 class="text">All in one Kuwait Directory</h3>
-            </div>
-        </div>
-    </section>
-    <section class="middle-body">
-        <h4>Latest News</h4>
-        <div class="news_container">
-            <p class="news_container_title">
-                Kuwait News
-            </p>
-            <div class="newsbox">
-                <a href="" class="news">
-                    
-                </a>
-            </div>
-        </div>
 
-        <div class="usefulwebsites">
-            <a href="" class="websites"></a>
-        </div>
-        
-        <div class="business_categories">
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-            <div class="category_container"></div>
-        </div>
-    </section>
+    <div id="navbar"></div>
 
+ <section class="hero">
+    <div class="hero-div">
+        <img src="LOGO.png" alt="">
+        <div id="hero-text">
+            <h1>HelloKuwait</h1>
+            <h2>دليل الكويت الشامل</h2>
+            <p>All-in-One Kuwait Directory</p>
+            <a id="hero-button" href="">Directory</a>
+        </div>
+    </div>
+ </section>
+
+
+ <div id="footer"></div>
+
+
+ <script>
+    fetch('../nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading the navbar:', error);
+        });
+
+    fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading the footer:', error);
+        });
+</script>
+<script src="../nav.js"></script>
 
 </body>
 </html>
